@@ -12,7 +12,7 @@ class AppRouter extends $AppRouter {
         CustomRoute(
             path: '/login',
             page: LoginRoute.page,
-            initial: true,
+            //initial: true,
             transitionsBuilder: TransitionsBuilders.slideLeft),
         CustomRoute(
             path: '/home',
@@ -28,8 +28,13 @@ class AppRouter extends $AppRouter {
             transitionsBuilder: TransitionsBuilders.slideLeft),
         CustomRoute(
             path: '/addprofile',
-            page: SettingRoute.page,
-            transitionsBuilder: TransitionsBuilders.slideLeft),       
+            page: AddProfileRoute.page,
+            transitionsBuilder: TransitionsBuilders.slideLeft), 
+        CustomRoute(
+            path: '/createaccount',
+            page: CreateAccountRoute.page,
+            initial: true,
+            transitionsBuilder: TransitionsBuilders.slideLeft),      
              /*
         CustomRoute(
             path: '/first',
