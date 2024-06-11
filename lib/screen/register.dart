@@ -106,7 +106,7 @@ class RegisterPage extends StatelessWidget {
                     color: Colors.white, // สีปุ่ม
                     child: InkWell(
                       onTap: () {
-                        context.router.replaceNamed('/ใส่หน้าที่จะไป');
+                        context.router.replaceNamed('/createaccount');
                       },
                       child: Center(
                         child: Text('Create new account',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 14)),

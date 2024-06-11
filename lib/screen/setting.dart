@@ -79,7 +79,7 @@ class ProfilePage extends StatelessWidget {
             Spacer(),
             ElevatedButton(
               onPressed: () {
-                // Log out action
+                context.router.replaceNamed('/register');
               },
               child: Text('Log out'),
               style: ElevatedButton.styleFrom(

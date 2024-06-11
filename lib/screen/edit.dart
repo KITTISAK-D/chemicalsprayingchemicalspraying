@@ -32,6 +32,15 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Profile Page'),
+
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            context.router.replaceNamed('/home');
+          },
+        ),
+        
+
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

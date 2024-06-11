@@ -31,18 +31,11 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            // Handle back button press
-          },
-        ),
         actions: [
           IconButton(
             icon: Icon(Icons.info_outline),
             onPressed: () {
-              // Handle info button press
+              context.router.replaceNamed('/setting');
             },
           ),
           SizedBox(width: 10),
@@ -170,7 +163,7 @@ class _DashboardPageState extends State<DashboardPage> {
       
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          context.router.replaceNamed('/ที่จะเพิ่ม ADD');
+          context.router.replaceNamed('/addprofile');
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.green,

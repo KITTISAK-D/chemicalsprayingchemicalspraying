@@ -77,7 +77,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Handle sign up logic here
+                    context.router.replaceNamed('/register');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
