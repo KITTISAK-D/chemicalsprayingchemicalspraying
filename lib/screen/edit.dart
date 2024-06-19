@@ -12,6 +12,7 @@ class EditPage extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: ProfilePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -32,15 +33,12 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Profile Page'),
-
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            context.router.replaceNamed('/home');
+            context.router.replaceNamed('/setting');
           },
         ),
-        
-
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -51,7 +49,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 children: [
                   CircleAvatar(
                     radius: 50,
-                    backgroundImage: NetworkImage('https://via.placeholder.com/150'), // Placeholder image
+                    backgroundImage: NetworkImage(
+                        'https://via.placeholder.com/150'), // Placeholder image
                   ),
                   Positioned(
                     bottom: 0,

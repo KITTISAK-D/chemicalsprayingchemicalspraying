@@ -6,39 +6,39 @@ class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
         CustomRoute(
-            path: '/register',
-            page: RegisterRoute.page,
-            transitionsBuilder: TransitionsBuilders.slideLeft),
+          path: '/register',
+          page: RegisterRoute.page,
+        ),
         CustomRoute(
-            path: '/login',
-            page: LoginRoute.page,
-            initial: true,
-            transitionsBuilder: TransitionsBuilders.slideLeft),
+          path: '/login',
+          page: LoginRoute.page,
+          initial: true,
+        ),
         CustomRoute(
-            path: '/home',
-            page: HomeRoute.page,
-            transitionsBuilder: TransitionsBuilders.slideLeft),
+          path: '/home',
+          page: HomeRoute.page,
+        ),
         CustomRoute(
-            path: '/setting',
-            page: SettingRoute.page,
-            transitionsBuilder: TransitionsBuilders.slideLeft),
+          path: '/setting',
+          page: SettingRoute.page,
+        ),
         CustomRoute(
-            path: '/edit',
-            page: EditRoute.page,
-            transitionsBuilder: TransitionsBuilders.slideLeft),
+          path: '/edit',
+          page: EditRoute.page,
+        ),
         CustomRoute(
-            path: '/addprofile',
-            page: AddProfileRoute.page,
-            transitionsBuilder: TransitionsBuilders.slideLeft), 
+          path: '/addprofile',
+          page: AddProfileRoute.page,
+        ),
         CustomRoute(
-            path: '/createaccount',
-            page: CreateAccountRoute.page,
-            transitionsBuilder: TransitionsBuilders.slideLeft),      
-             /*
+          path: '/createaccount',
+          page: CreateAccountRoute.page,
+        ),
+        /*
         CustomRoute(
             path: '/first',
             page: FirstRoute.page,
             initial: true,
-        ),*/
+            transitionsBuilder: TransitionsBuilders.slideLeft),*/
       ];
 }

@@ -12,6 +12,7 @@ class SettingPage extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: ProfilePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

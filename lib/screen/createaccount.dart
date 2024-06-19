@@ -5,10 +5,11 @@ import 'package:flutter/material.dart';
 class CreateAccountPage extends StatelessWidget {
   const CreateAccountPage({super.key});
 
-@override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: CreateAccountScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -21,7 +22,8 @@ class CreateAccountScreen extends StatefulWidget {
 class _CreateAccountScreenState extends State<CreateAccountScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
