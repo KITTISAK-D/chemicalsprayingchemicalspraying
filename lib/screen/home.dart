@@ -26,6 +26,7 @@ class _DashboardPageState extends State<DashboardPage> {
   bool savingMode = true;
   bool settingSpraying = true;
   bool chemicalSavingMode = true;
+  double sprayLevel = 2.0;
 
   @override
   Widget build(BuildContext context) {
@@ -77,9 +78,8 @@ class _DashboardPageState extends State<DashboardPage> {
                           title: 'Battery',
                           value: '80%',
                           color: Colors.green,
-                          hasToggle: true,
-                          toggleLabel: 'Saving mode',
-                          switchValue: savingMode,
+                          hasToggle: false,
+                          toggleLabel: ' ',
                           onSwitchChanged: (value) {
                             setState(() {
                               savingMode = value;
@@ -87,19 +87,35 @@ class _DashboardPageState extends State<DashboardPage> {
                           },
                         ),
                         InfoCard(
-                          title: 'Setting spraying',
-                          value: 'Level 2',
+                          title: 'Setting Spraying',
+                          value: 'Level ${sprayLevel.toInt()}',
                           color: Colors.green,
                           hasToggle: false,
-                          additionalInfo: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          additionalInfo: Column(
                             children: [
-                              Text('ON'),
-                              Switch(
-                                value: settingSpraying,
-                                onChanged: (bool value) {
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text('ON'),
+                                  Switch(
+                                    value: settingSpraying,
+                                    onChanged: (bool value) {
+                                      setState(() {
+                                        settingSpraying = value;
+                                      });
+                                    },
+                                  ),
+                                ],
+                              ),
+                              Slider(
+                                value: sprayLevel,
+                                min: 1,
+                                max: 3,
+                                divisions: 2,
+                                label: sprayLevel.toInt().toString(),
+                                onChanged: (double value) {
                                   setState(() {
-                                    settingSpraying = value;
+                                    sprayLevel = value;
                                   });
                                 },
                               ),
@@ -118,14 +134,13 @@ class _DashboardPageState extends State<DashboardPage> {
                           value: '10 Km',
                           color: Colors.blue,
                           hasToggle: false,
-                          toggleLabel: 'Check Location',
                         ),
                         InfoCard(
                           title: 'Chemical Level',
                           value: '50%',
                           color: Colors.green,
-                          hasToggle: true,
-                          toggleLabel: 'Saving mode',
+                          hasToggle: false,
+                          toggleLabel: ' ',
                           switchValue: chemicalSavingMode,
                           onSwitchChanged: (value) {
                             setState(() {
@@ -159,15 +174,12 @@ class _DashboardPageState extends State<DashboardPage> {
         ],
         selectedItemColor: Colors.green,
       ),
-      
-      
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           context.router.replaceNamed('/addprofile');
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.green,
-        
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );

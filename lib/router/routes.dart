@@ -34,6 +34,10 @@ class AppRouter extends $AppRouter {
           path: '/createaccount',
           page: CreateAccountRoute.page,
         ),
+        CustomRoute(
+          path: '/nottification',
+          page: NottificationRoute.page,
+        ),
         /*
         CustomRoute(
             path: '/first',
