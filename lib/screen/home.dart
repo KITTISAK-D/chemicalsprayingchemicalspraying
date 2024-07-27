@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:chemicalspraying/components/cardInfo.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -55,18 +56,36 @@ class _DashboardPageState extends State<DashboardPage> {
                     Stack(
                       alignment: Alignment.center,
                       children: [
-                        CircularProgressIndicator(
-                          value: 4.23 / 10, // Adjust value as needed
-                          strokeWidth: 60,
-                          backgroundColor: Colors.grey.shade300,
-                          valueColor:
-                              AlwaysStoppedAnimation<Color>(Colors.green),
+                        
+                        // CircularProgressIndicator(
+                        //   value: 4.23 / 10, // Adjust value as needed
+                        //   strokeWidth: 60,
+                        //   backgroundColor: Colors.grey.shade300,
+                        //   valueColor:
+                        //       AlwaysStoppedAnimation<Color>(Colors.green),
+                        // ),
+                        // Text(
+                        //   '4.23\nkm/s',
+                        //   textAlign: TextAlign.center,
+                        //   style: TextStyle(
+                        //       fontSize: 24, fontWeight: FontWeight.bold),
+                        // ),
+                        Container(
+                          width: 90,
+                          height: 90,
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 207, 196, 132),
+                            borderRadius: BorderRadius.circular(90)
+                          ),
                         ),
-                        Text(
-                          '4.23\nkm/s',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 24, fontWeight: FontWeight.bold),
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(60)
+                          ),
+                          child: Center(child: Text("10 %"))
                         ),
                       ],
                     ),
@@ -74,18 +93,30 @@ class _DashboardPageState extends State<DashboardPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        InfoCard(
-                          title: 'Battery',
-                          value: '80%',
-                          color: Colors.green,
-                          hasToggle: false,
-                          toggleLabel: ' ',
-                          onSwitchChanged: (value) {
-                            setState(() {
-                              savingMode = value;
-                            });
-                          },
+                        // InfoCard(
+                        //   title: 'Battery',
+                        //   value: '80%',
+                        //   color: Colors.green,
+                        //   hasToggle: false,
+                        //   toggleLabel: ' ',
+                        //   onSwitchChanged: (value) {
+                        //     setState(() {
+                        //       savingMode = value;
+                        //     });
+                        //   },
+                        // ),
+                        CSCCardInfo(
+                          child: Text("111"),
+                          width: 200,
                         ),
+                        CSCCardInfo(
+                          title: "test",
+                          child: Text("22"),
+                        ),
+                        CSCCardInfo(
+                          child: Text("33"),
+                        ),
+
                         InfoCard(
                           title: 'Setting Spraying',
                           value: 'Level ${sprayLevel.toInt()}',
