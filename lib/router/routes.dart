@@ -6,30 +6,30 @@ class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
         CustomRoute(
-          path: '/register',
-          page: RegisterRoute.page,
+          path: '/first',
+          page: FirstRoute.page,
+          initial: true,
         ),
         CustomRoute(
           path: '/login',
           page: LoginRoute.page,
-          initial: true,
         ),
         CustomRoute(
           path: '/home',
           page: HomeRoute.page,
         ),
         CustomRoute(
-          path: '/setting',
-          page: SettingRoute.page,
+          path: '/profile',
+          page: UserProfileRoute.page,
         ),
         CustomRoute(
           path: '/edit',
           page: EditRoute.page,
         ),
-        CustomRoute(
+       /* CustomRoute(
           path: '/addprofile',
           page: AddProfileRoute.page,
-        ),
+        ),*/
         CustomRoute(
           path: '/createaccount',
           page: CreateAccountRoute.page,

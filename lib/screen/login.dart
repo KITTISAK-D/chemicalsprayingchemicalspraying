@@ -8,49 +8,129 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _emailController;
+    var _passwordController;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: 305,
-                width: 275,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('lib/assets/image/image.png'))),
-              ),
-              Container(
-                child: Text(
-                  "One Stop Solution\n" "\t\t\tfor your Crops",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontSize: 35),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Form(
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 75,
                 ),
-              ),
-              SizedBox(
-                height: 173,
-              ),
-              Container(
-                height: 60,
-                width: 362,
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromRGBO(71, 192, 61, 1))),
-                  onPressed: () {
-                    context.router.replaceNamed('/register');
-                  },
+                Container(
                   child: Text(
-                    "GET START",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    "Login here",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromRGBO(71, 192, 61, 1),
+                        fontSize: 30),
                   ),
                 ),
-              )
-            ],
+                SizedBox(
+                  height: 26,
+                ),
+                Container(
+                  child: Text(
+                    "Welcome back you’ve\n \t\t\t\t\t\t been missed!",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 20),
+                  ),
+                ),
+                SizedBox(
+                  height: 58,
+                ),
+                TextFormField(
+                  controller: _emailController,
+                  decoration: InputDecoration(
+                    labelText: 'Email',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                TextFormField(
+                  controller: _passwordController,
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                  obscureText: true,
+                ),
+                SizedBox(
+                  height: 9,
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "\t\t\t\t\t                                                Forgot your password?",
+                    style: TextStyle(
+                        color: Color.fromRGBO(121, 118, 118, 1), fontSize: 14),
+                  ),
+                ),
+                SizedBox(
+                  height: 109,
+                ),
+                Container(
+                  height: 65,
+                  width: 357,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromRGBO(71, 192, 61, 1))),
+                            
+                    onPressed: () {
+                      context.router.replaceNamed('/home');
+                    },
+                    child: Text(
+                      "Sign in",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  height: 41,
+                  width: 357,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Color.fromRGBO(71, 192, 61, 1), // สีกรอบ
+                      width: 2.5, // ความหนาของกรอบ
+                    ),
+                    borderRadius: BorderRadius.circular(10.0), // มุมโค้งมน
+                  ),
+                  child: Material(
+                    color: Colors.white, // สีปุ่ม
+                    child: InkWell(
+                      onTap: () {
+                        context.router.replaceNamed('/createaccount');
+                      },
+                      child: Center(
+                        child: Text('Create new account',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 14)),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 194,
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text('Don\'t have an Account? ' 'Sign up',
+                      style: TextStyle(color: Colors.black, fontSize: 14)),
+                ),
+              ],
+            ),
           ),
         ),
       ),
