@@ -32,9 +32,17 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            context.router.replaceNamed('/login');
+          },
+        ),
+      ),
       body: Container(
         color: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+        padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 20.0),
         child: Column(
           children: [
             // Top Circular Speed Indicator
@@ -45,7 +53,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   // Background Circle
                   Container(
                     width: 220,
-                    height: 220,
+                    height: 200,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.green.shade100,
@@ -123,7 +131,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             // Info Cards Row 2
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
