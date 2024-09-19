@@ -6,11 +6,6 @@ class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
         CustomRoute(
-          path: '/first',
-          page: FirstRoute.page,
-          initial: true,
-        ),
-        CustomRoute(
           path: '/login',
           page: LoginRoute.page,
         ),
@@ -26,10 +21,10 @@ class AppRouter extends $AppRouter {
           path: '/edit',
           page: EditRoute.page,
         ),
-       /* CustomRoute(
+       CustomRoute(
           path: '/addprofile',
-          page: AddProfileRoute.page,
-        ),*/
+          page: AddprofileRoute.page,
+        ),
         CustomRoute(
           path: '/createaccount',
           page: CreateAccountRoute.page,
@@ -38,11 +33,14 @@ class AppRouter extends $AppRouter {
           path: '/nottification',
           page: NottificationRoute.page,
         ),
-        /*
+        CustomRoute(
+          path: '/googlemap',
+          page: MapRoute.page,
+        ),
         CustomRoute(
             path: '/first',
             page: FirstRoute.page,
             initial: true,
-            transitionsBuilder: TransitionsBuilders.slideLeft),*/
+            transitionsBuilder: TransitionsBuilders.slideLeft),
       ];
 }

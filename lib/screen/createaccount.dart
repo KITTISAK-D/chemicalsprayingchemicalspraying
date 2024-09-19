@@ -31,7 +31,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[50],
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
@@ -171,6 +171,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                     Expanded(
                       child: OutlinedButton(
                         onPressed: () {
+                          context.router.replaceNamed('/login');
                           // Handle already have an account logic here
                         },
                         style: OutlinedButton.styleFrom(

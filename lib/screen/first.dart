@@ -45,7 +45,7 @@ class FirstPage extends StatelessWidget {
                     context.router.replaceNamed('/login');
                   },
                   child: Text(
-                    "GET START",
+                    "เริ่มต้น",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),

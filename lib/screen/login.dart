@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 Container(
                   child: Text(
-                    "Login here",
+                    "ลงชื่อเข้าใช้",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Color.fromRGBO(71, 192, 61, 1),
@@ -35,7 +35,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 Container(
                   child: Text(
-                    "Welcome back you’ve\n \t\t\t\t\t\t been missed!",
+                    '\t\t\t\t'"ยินดีตอนรับสู่\nสวนไม้ผลอัจฉริยะ!",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
@@ -48,7 +48,7 @@ class LoginPage extends StatelessWidget {
                 TextFormField(
                   controller: _emailController,
                   decoration: InputDecoration(
-                    labelText: 'Email',
+                    labelText: 'อีเมล',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
@@ -58,7 +58,7 @@ class LoginPage extends StatelessWidget {
                 TextFormField(
                   controller: _passwordController,
                   decoration: InputDecoration(
-                    labelText: 'Password',
+                    labelText: 'รหัสผ่าน',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
@@ -71,7 +71,7 @@ class LoginPage extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "\t\t\t\t\t                                                Forgot your password?",
+                    "\t\t\t\t\t                                                ลืมรหัสผ่าน?",
                     style: TextStyle(
                         color: Color.fromRGBO(121, 118, 118, 1), fontSize: 14),
                   ),
@@ -88,10 +88,10 @@ class LoginPage extends StatelessWidget {
                             Color.fromRGBO(71, 192, 61, 1))),
                             
                     onPressed: () {
-                      context.router.replaceNamed('/home');
+                      context.router.replaceNamed('/addprofile');
                     },
                     child: Text(
-                      "Sign in",
+                      "เข้าสู่ระบบ",
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                   ),
@@ -116,7 +116,7 @@ class LoginPage extends StatelessWidget {
                         context.router.replaceNamed('/createaccount');
                       },
                       child: Center(
-                        child: Text('Create new account',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 14)),
+                        child: Text('สร้างบัญชี',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 14)),
                       ),
                     ),
                   ),

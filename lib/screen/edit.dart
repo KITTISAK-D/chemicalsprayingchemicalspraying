@@ -36,7 +36,7 @@ class _ProfilePageState extends State<ProfilePage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            context.router.replaceNamed('/setting');
+            context.router.replaceNamed('/addprofile');
           },
         ),
       ),
@@ -100,6 +100,7 @@ class _ProfilePageState extends State<ProfilePage> {
             SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
+                context.router.replaceNamed('/addprofile');
                 // Add functionality to save profile details
                 print('Name: ${_nameController.text}');
                 print('Username: ${_usernameController.text}');
