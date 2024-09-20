@@ -33,7 +33,7 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            context.router.replaceNamed('/home');
+            context.router.replaceNamed('/addprofile');
           },
         ),
       ),

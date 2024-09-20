@@ -9,7 +9,7 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromARGB(255, 178, 223, 245),
       body: Container(
         child: Center(
           child: Column(
@@ -32,11 +32,11 @@ class FirstPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 173,
+                height: 129,
               ),
               Container(
                 height: 60,
-                width: 362,
+                width: 160,
                 child: ElevatedButton(
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
@@ -45,7 +45,26 @@ class FirstPage extends StatelessWidget {
                     context.router.replaceNamed('/login');
                   },
                   child: Text(
-                    "เริ่มต้น",
+                    "เข้าสู่ระบบ",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                padding: const EdgeInsets.all(1.0),
+                height: 60,
+                width: 160,
+                margin: EdgeInsets.only(top: 10),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          Color.fromRGBO(71, 192, 61, 1))),
+                  onPressed: () {
+                    context.router.replaceNamed('/createaccount');
+                  },
+                  child: Text(
+                    "สมัครสมาชิก",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),

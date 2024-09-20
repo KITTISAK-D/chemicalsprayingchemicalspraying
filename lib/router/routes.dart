@@ -14,7 +14,7 @@ class AppRouter extends $AppRouter {
           page: HomeRoute.page,
         ),
         CustomRoute(
-          path: '/profile',
+          path: '/userprofile',
           page: UserProfileRoute.page,
         ),
         CustomRoute(
@@ -36,6 +36,10 @@ class AppRouter extends $AppRouter {
         CustomRoute(
           path: '/googlemap',
           page: MapRoute.page,
+        ),
+        CustomRoute(
+          path: '/profile',
+          page: Profile.page,
         ),
         CustomRoute(
             path: '/first',

@@ -36,7 +36,7 @@ class _DashboardPageState extends State<DashboardPage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            context.router.replaceNamed('/login');
+            context.router.replaceNamed('/addprofile');
           },
         ),
       ),

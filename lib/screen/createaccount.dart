@@ -78,8 +78,10 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                          items: <String>['เพศชาย', 'เพศหญิง',]
-                              .map<DropdownMenuItem<String>>((String value) {
+                          items: <String>[
+                            'เพศชาย',
+                            'เพศหญิง',
+                          ].map<DropdownMenuItem<String>>((String value) {
                             return DropdownMenuItem<String>(
                               value: value,
                               child: Text(value),
@@ -150,15 +152,18 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromRGBO(71, 192, 61, 1),
-                          padding:
-                              EdgeInsets.symmetric(vertical: 20), // Remove horizontal padding
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20), // Remove horizontal padding
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                         ),
                         child: Text(
                           'สมัครสมาชิก',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
                         ),
                       ),
                     ),
@@ -175,8 +180,8 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                           // Handle already have an account logic here
                         },
                         style: OutlinedButton.styleFrom(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 20), // Remove horizontal padding
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20), // Remove horizontal padding
                           side: BorderSide(
                               color: Color.fromRGBO(71, 192, 61, 1), width: 2),
                           shape: RoundedRectangleBorder(
